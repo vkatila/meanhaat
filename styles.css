@@ -113,13 +113,32 @@ body{
   display: block;
 }
 
-/* ===== SIGNPOST IMAGES (viitta1 & viitta2) ===== */
-.sign-img {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+/* ===== SIGNPOST CONTAINER ===== */
+.sign-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* väli kuvien välillä */
+  flex-wrap: wrap; /* responsiivisuus, kuvat menevät allekkain mobiilissa */
+  margin: 20px 0;
 }
+
+/* ===== SIGN IMAGES (viitta1 & viitta2) ===== */
+.sign-img {
+  width: 100%;
+  max-width: 250px;  /* Maksimi leveys, säilyttää kuvan koon */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== SIGN IMAGE CAPTIONS ===== */
+.img-caption {
+  text-align: center;
+  color: #8B7E74;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
 
 /* ===== CONTENT LAYOUT ===== */
 .container{
