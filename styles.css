@@ -341,3 +341,8 @@ button:hover{
   p{ font-size: 15px; }
   h2{ font-size: 24px; }
 }
+@media (max-width: 600px){
+  .sign-img{
+    width: 80%;
+  }
+}
