@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satu & Ville – 25.7.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <!-- LANGUAGE SWITCH -->
+  <nav class="lang-top" aria-label="Language selection">
+    <a href="FIN.html" class="lang-link">FIN</a>
+    <span class="lang-sep">/</span>
+    <span class="lang-link active" aria-current="page">ENG</span>
+  </nav>
+
+  <div class="container">
+    <h2>Date & Location</h2>
+    <p>25 July 2026</p>
+    <p><strong>Ceremony:</strong> Matarengi Church at 15:00 (Finnish time)</p>
+    <p><strong>Reception:</strong> Lapland View Lodge</p>
+
+    <h3>Matarengi Church</h3>
+    <p>
+      Matarengi Church (Swedish: Övertorneå kyrka) is a church in Övertorneå, Norrbotten County, Sweden.
+      The parish’s main church in the town center was built in 1735–1737, and the separate bell tower was completed in 1763.
+      It is one of the best-preserved 18th-century churches in northern Sweden and is home to Sweden’s oldest organs still in use.
+      – Wikipedia –
+    </p>
+
+    <h3>Lapland View Lodge</h3>
+    <p>
+      Lapland View Lodge is located on Mount Luppio near Övertorneå. Built in harmony with nature, the scenic hotel welcomed its first guests
+      in December 2021 and is now open year-round. Two main buildings with terraces include the reception, restaurant, bar, and a cozy lounge
+      with a fireplace. In the restaurant you can enjoy local cuisine made from Lapland ingredients. The buildings, spa area, and 40 cabins
+      feature large windows offering breathtaking views over the Tornio River Valley and the surrounding landscape. – Lapland View Lodge –
+    </p>
+
+    <h2>How do I get there?</h2>
+    <p>You can find Matarengi Church at: Matarengivägen 31, 957 31 Övertorneå, Sweden</p>
+    <p>Lapland View Lodge: Luppio 202, 957 91 Övertorneå, Sweden.</p>
+
+    <!-- My Maps embed -->
+    <iframe class="map" src="https://www.google.com/maps/d/embed?mid=1yU7i12njITDWcEyxvYRuPLUAWe_k_lQ&ehbc=2E312F&noprof=1"></iframe>
+
+    <h2>Accommodation</h2>
+    <p>There are several accommodation options near the venue – here are the couple’s recommendations.</p>
+    <h3>Lapland View Lodge</h3>
+    <p>Lapland View Lodge is the reception venue, and the couple will stay here.</p>
+    <p>Lapland View Lodge offers high-quality accommodation in cabins with large glass windows. A spa area and sauna with stunning views are available for an additional fee.</p>
+
+    <h3>Matarengi Lodge</h3>
+    <p>Matarengi Lodge offers high-quality hotel accommodation in the center of Matarengi, about 10 km from the venue.</p>
+
+    <h2>RSVP</h2>
+    <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+      <label for="name">Name (required)</label>
+      <input type="text" id="name" name="name" required placeholder="First name Last name" />
+
+      <label for="attendance">Attendance (required)</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="attendance" value="Attending" required /> I will attend
+        </label>
+        <label>
+          <input type="radio" name="attendance" value="Not attending" required /> Unfortunately I can’t make it
+        </label>
+      </div>
+
+      <label for="message">Additional info (e.g. food allergies, accommodation, etc.)</label>
+      <textarea id="message" name="message" placeholder="Write here"></textarea>
+
+      <button type="submit">Send RSVP</button>
+    </form>
+  </div>
+</body>
+</html>
