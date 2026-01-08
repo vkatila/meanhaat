@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satu & Ville – 25.7.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <!-- LANGUAGE SWITCH -->
+  <nav class="lang-top" aria-label="Language selection">
+    <span class="lang-link active" aria-current="page">FIN</span>
+    <span class="lang-sep">/</span>
+    <a href="ENG.html" class="lang-link">ENG</a>
+  </nav>
+
+  <div class="container">
+    <h2>Aika ja Paikka</h2>
+    <p>25 heinäkuuta 2026</p>
+    <p><strong>Vihkiminen:</strong> Mataringin Kirkko klo: 15:00 (Suomen aikaa)</p>
+    <p><strong>Hääjuhla:</strong> Lapland View Lodge</p>
+
+    <h3>Mataringin kirkko</h3>
+    <p>
+      Matarengin kirkko (ruots. Övertorneå kyrka) on kirkkorakennus Ylitornion kunnassa
+      Norrbottenin läänissä Ruotsissa. Kunnan keskustaajamassa oleva Övertorneån seurakunnan
+      pääkirkko on rakennettu vuosina 1735–1737. Erillinen kellotapuli on valmistunut vuonna 1763.
+      Kirkko on Pohjois-Ruotsin parhaiten säilyneitä 1700-luvun kirkkoja ja siellä on Ruotsin
+      vanhimmat edelleen käytössä olevat urut. - Wikipedia -
+    </p>
+
+    <h3>Lapland View Lodge</h3>
+    <p>
+      Lapland View Lodge sijaitsee Luppio-vuorella Övertorneån vieressä. Luonnon kanssa harmoniassa
+      rakennettu maisemahotelli oli valmis vastaanottamaan vieraita joulukuussa 2021 ja on nyt avoinna
+      ympäri vuoden. Kahdessa päärakennuksessa, joiden yhteydessä on terassi, sijaitsevat vastaanotto,
+      ravintola, baari ja viihtyisä takkahuone. Ravintolassamme nautitte paikallisesta ruoasta ja
+      tarjoilemme aterioita, jotka on valmistettu Lapin paikallisista raaka-aineista. Rakennuksissa ja
+      kylpyläalueella sekä 40 hotellimökissä on suuret ikkunat, joista voit nauttia henkeäsalpaavista
+      näkymistä Tornionjoen laakson ja laajan ympäristön yli – Lapland View Lodge -
+    </p>
+
+    <h2>Miten pääsen paikalle?</h2>
+    <p>Mataringin kirkon löydät osoitteesta Matarengivägen 31, 957 31 Övertorneå, Sweden</p>
+    <p>Lapland View Lodgen osoitteesta: Luppio 202, 957 91 Övertorneå, Sweden.</p>
+
+    <!-- My Maps -upotus -->
+    <iframe class="map" src="https://www.google.com/maps/d/embed?mid=1yU7i12njITDWcEyxvYRuPLUAWe_k_lQ&ehbc=2E312F&noprof=1"></iframe>
+
+    <h2>Majoittuminen</h2>
+    <p>Juhlapaikan läheisyydessä on useita majoitusvaihtoehtoja, tässä hääparin suositukset.</p>
+
+    <h3>Lapland View Lodge</h3>
+    <p>Lapland View Lodge toimii häiden juhlapaikkana ja hääpari yöpyy täällä.</p>
+    <p>Lapland View Lodge tarjoaa tasokasta majoitusta suurin lasi-ikkunoin varustetuissa mökeissä. Lisähinnasta käytössä Spa-alue ja sauna upeilla näkymillä.</p>
+
+    <h3>Matarengi Lodge</h3>
+    <p>Matarengi Lodge tarjoaa tasokasta hotellimajoitusta Matarengin keskustassa n. 10km juhlapaikasta. Hotellissa on Spa-alue ja sauna. Tänne pääset juhlpaikalta kätevästi esimerkiksi taksilla.</p>
+
+    <h2>Ilmoittautuminen</h2>
+    <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+      <label for="name">Nimi (pakollinen)</label>
+      <input type="text" id="name" name="name" required placeholder="Etunimi Sukunimi" />
+
+      <label>Osallistuminen (pakollinen)</label>
+      <div class="radio-group">
+        <label><input type="radio" name="attendance" value="Osallistun" required /> Osallistun</label>
+        <label><input type="radio" name="attendance" value="Ei osallistu" required /> Valitettavasti en pääse osallistumaan</label>
+      </div>
+
+      <label for="message">Lisätiedot (esim. ruoka-allergiat, majoittuminen yms.)</label>
+      <textarea id="message" name="message" placeholder="Kirjoita tähän"></textarea>
+
+      <button type="submit">Lähetä ilmoittautuminen</button>
+    </form>
+  </div>
+</body>
+</html>
