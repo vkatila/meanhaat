@@ -249,16 +249,23 @@ button:hover{
 }
 
 .index-lang{
+  position: fixed;
+  left: 50%;
+  top: 54%;                 /* säädä 50–60% jos haluat ylemmäs/alemmas */
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 150px;
   width: min(520px, calc(100% - 32px));
   z-index: 2;
-  position: relative;
 
   opacity: 0;
-  transform: translateY(12px);
   animation: indexFadeIn 1.2s ease forwards;
 }
+
+@keyframes indexFadeIn{
+  from { opacity: 0; transform: translate(-50%, -46%); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
 
 @keyframes indexFadeIn{
   to{ opacity: 1; transform: translateY(0); }
@@ -326,7 +333,8 @@ button:hover{
 }
 
 @media (max-width: 480px){
-  .index-lang{ margin-top: 120px; }
+  .index-lang{ top: 56%; }   /* pieni säätö mobiilille */
   .index-choices{ font-size: 44px; }
   .index-prompt{ font-size: 16px; }
 }
+
