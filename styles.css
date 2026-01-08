@@ -113,6 +113,13 @@ body{
   display: block;
 }
 
+/* ===== SIGNPOST IMAGES (viitta1 & viitta2) ===== */
+.sign-img{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ===== CONTENT LAYOUT ===== */
 .container{
   width: 100%;
