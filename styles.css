@@ -100,10 +100,11 @@ body{
 }
 
 .banner-image{
-  display: none; /* shown after video */
+  display: none;
   position: relative;
   width: 100%;
   height: auto;
+  padding-top: 56px; /* varaa tilaa FIN/ENG-valitsimelle */
 }
 
 .banner-image img{
