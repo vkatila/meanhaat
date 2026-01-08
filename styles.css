@@ -330,11 +330,3 @@ button:hover{
   p{ font-size: 15px; }
   h2{ font-size: 24px; }
 }
-
-@media (max-width: 480px){
-  .index-lang{ top: 56%; }   /* Tämä rivivaihto poistaa ylimääräisen marginaalin */
-  .index-choices{ font-size: 44px; }
-  .index-prompt{ font-size: 16px; }
-}
-
-
