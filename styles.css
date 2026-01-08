@@ -251,24 +251,27 @@ button:hover{
 .index-lang{
   position: fixed;
   left: 50%;
-  top: 50%;                   /* Keskitetään ylös/alas */
-  transform: translate(-50%, -50%); /* Keskitetään tarkasti */
+  top: 50%;
+  transform: translate(-50%, -50%); /* TÄMÄ PYSYY AINA, ei animoida */
   text-align: center;
   width: min(520px, calc(100% - 32px));
   z-index: 2;
+}
 
+/* Animoidaan vain sisäosaa */
+.index-lang-inner{
   opacity: 0;
+  transform: translateY(10px);
   animation: indexFadeIn 1.2s ease forwards;
 }
 
 @keyframes indexFadeIn{
-  from { opacity: 0; transform: translate(-50%, -55%); }
-  to   { opacity: 1; transform: translate(-50%, -50%); }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes indexFadeIn{
-  to{ opacity: 1; transform: translateY(0); }
-}
 
 .index-prompt{
   font-size: 18px;
