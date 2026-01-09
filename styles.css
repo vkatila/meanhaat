@@ -45,7 +45,7 @@ body{
   position: fixed;
   top: 16px;
   right: 20px;
-  z-index: 30;
+  z-index: 4;
   font-size: 14px;
   letter-spacing: 1px;
   color: rgba(74,74,74,0.75);
@@ -86,7 +86,7 @@ body{
   overflow: hidden;
   display: block;
   background-color: var(--bg);
-  z-index: 31; /* above bg layers */
+  z-index: 5; /* above bg layers */
 }
 
 .video-container video{
@@ -104,7 +104,7 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 30; /* Banneri pysyy päällimmäisenä */
+  z-index: 4; /* Banneri pysyy päällimmäisenä */
   display: block; /* Näytetään se videon jälkeen */
 }
 
@@ -370,7 +370,7 @@ button:hover{
 }
 @media (max-width: 768px) {
   .banner-image {
-    padding-top: 56px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
+    padding-top: 0; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
   }
   .container {
     margin-top: 40%; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
