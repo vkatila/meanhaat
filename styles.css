@@ -45,7 +45,7 @@ body{
   position: fixed;
   top: 16px;
   right: 20px;
-  z-index: 4;
+  z-index: 5;
   font-size: 14px;
   letter-spacing: 1px;
   color: rgba(74,74,74,0.75);
@@ -86,7 +86,7 @@ body{
   overflow: hidden;
   display: block;
   background-color: var(--bg);
-  z-index: 5; /* above bg layers */
+  z-index: 6; /* above bg layers */
 }
 
 .video-container video{
