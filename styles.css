@@ -104,6 +104,7 @@ body{
   position: relative;
   width: 100%;
   height: auto;
+  display: none; /* Piilotetaan aluksi */
 }
 
 /* ===== BANNER 1: PYSYY PAIKALLA (fixed) ===== */
@@ -112,7 +113,7 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; /* Varmistaa, että banneri1 on päällimmäisenä */
+  z-index: 10;  /* Pysyy päällimmäisenä */
   display: block;
 }
 
@@ -121,11 +122,12 @@ body{
   height: auto;
 }
 
-/* ===== BANNER 2: LIIKKUU SIVUN MUKAAN ===== */
+/* ===== BANNER 2: LIIKKUU SIVUN MUKAAN (vierittäessä) ===== */
 .banner2 {
   position: relative;
-  margin-top: 50vh; /* Siirtää banneri2:n alas, niin että se tulee banneri1:n alle */
+  margin-top: 100vh; /* Siirtää banneri2:n alas, niin että se menee banneri1:n alapuolelle */
   display: block;
+  width: 100%; /* Varmistetaan, että banneri2 on yhtä leveä kuin banneri1 */
 }
 
 .banner2 img {
@@ -133,11 +135,10 @@ body{
   height: auto;
 }
 
-/* ===== CONTENT (muu sisältö, menee banneri2:n alle) ===== */
+/* ===== CONTENT (muu sisältö menee banneri2:n alapuolelle) ===== */
 .container {
-  margin-top: 60vh; /* Puskee sisällön alas niin, että se menee banneri2:n alapuolelle */
+  margin-top: 100vh;  /* Puskee sisällön alas niin, että se menee banneri2:n alapuolelle */
 }
-
 
 /* ===== SIGNPOST CONTAINER ===== */
 .sign-container {
@@ -390,5 +391,20 @@ button:hover{
 @media (max-width: 600px){
   .sign-img{
     width: 80%;
+  }
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px){
+  .banner1 {
+    height: auto;
+  }
+
+  .banner2 {
+    margin-top: 80vh; /* Pienempi väli mobiilissa */
+  }
+
+  .container {
+    margin-top: 80vh; /* Mobiilissa sisältö menee banneri2:n alapuolelle */
   }
 }
