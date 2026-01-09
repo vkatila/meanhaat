@@ -173,21 +173,20 @@
       const banner2 = document.querySelector('.banner2');
       const container = document.querySelector('.container');
 
-    // Video päättyy ja banneri1 tulee näkyviin
-    video.addEventListener('ended', () => {
-      video.style.display = 'none'; // Piilotetaan video
-      banner1.style.display = 'block'; // Näytetään banneri1
-      bannerContainer.style.display = 'block'; // Näytetään koko banner-container
+      // Video päättyy ja banneri1 tulee näkyviin
+      video.addEventListener('ended', () => {
+        video.style.display = 'none'; // Piilotetaan video
+        banner1.style.display = 'block'; // Näytetään banneri1
+        bannerContainer.style.display = 'block'; // Näytetään koko banner-container
 
-    // Pienennetään video-container bannerin korkeuteen (ettei jää tyhjää 100vh-tilaa)
-      const vc = document.querySelector('.video-container');
-      vc.style.height = 'auto';
+        // Pienennetään video-container bannerin korkeuteen (ettei jää tyhjää 100vh-tilaa)
+        const vc = document.querySelector('.video-container');
+        vc.style.height = 'auto';
 
-    // Banneri2 tulee näkyviin ja muu sisältö
-      banner2.style.display = 'block'; // Näytetään banneri2
-      container.style.display = 'block'; // Näytetään muu sisältö
-});
-
+        // Banneri2 tulee näkyviin ja muu sisältö
+        banner2.style.display = 'block'; // Näytetään banneri2
+        container.style.display = 'block'; // Näytetään muu sisältö
+      ;
 
     // Fallback: if video can't autoplay, show content
     window.addEventListener('load', () => {
