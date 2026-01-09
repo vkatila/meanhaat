@@ -99,17 +99,18 @@ body{
   display: block;
 }
 
-.banner-image{
-  display: none;
-  position: fixed;
+.banner-image {
+  position: fixed; /* Kiinnitetään banneri1 paikalleen */
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  padding-top: 56px; /* varaa tilaa FIN/ENG-valitsimelle */
+  z-index: 10; /* Banneri pysyy päällimmäisenä */
+  display: block; /* Näytetään se videon jälkeen */
 }
 
-.banner-image img{
+.banner-image img {
   width: 100%;
-  height: auto;
+  height: auto; /* Säilyttää mittasuhteet */
   display: block;
 }
 
