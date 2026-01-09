@@ -86,7 +86,7 @@ body{
   overflow: hidden;
   display: block;
   background-color: var(--bg);
-  z-index: 2; /* above bg layers */
+  z-index: 31; /* above bg layers */
 }
 
 .video-container video{
@@ -104,7 +104,7 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; /* Banneri pysyy päällimmäisenä */
+  z-index: 30; /* Banneri pysyy päällimmäisenä */
   display: block; /* Näytetään se videon jälkeen */
 }
 
