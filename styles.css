@@ -1,4 +1,3 @@
-/* ========= styles.css ========= */
 :root {
   --bg: rgba(247, 242, 241, 1);
   --text: #4A4A4A;
@@ -20,78 +19,6 @@ body {
   background-color: var(--bg);
   color: var(--text);
   overflow-x: hidden;
-}
-
-/* ===== PAPER GRAIN (subtle) ===== */
-.grain {
-  position: fixed;
-  inset: -50%;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1; /* above bg/overlay, below UI */
-  animation: grainMove 14s steps(1) infinite;
-  opacity: 0.9;
-}
-
-@keyframes grainMove {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(-2%, 1%);
-  }
-  50% {
-    transform: translate(1%, -2%);
-  }
-  75% {
-    transform: translate(2%, 1%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-/* ===== TOP LANGUAGE SWITCH (FIN/ENG pages) ===== */
-.lang-top {
-  position: fixed;
-  top: 16px;
-  right: 20px;
-  z-index: 30;
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: rgba(74,74,74,0.75);
-  user-select: none;
-}
-
-.lang-link {
-  color: rgba(74,74,74,0.85);
-  text-decoration: none;
-  padding: 2px 4px;
-  transition: opacity 120ms ease;
-}
-
-.lang-link:hover {
-  opacity: 0.6;
-}
-
-.lang-sep {
-  margin: 0 4px;
-  opacity: 0.4;
-}
-
-.lang-link.active {
-  font-weight: 700;
-  opacity: 1;
-  position: relative;
-}
-
-.lang-link.active::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background: rgba(74,74,74,0.45);
-  margin-top: 3px;
 }
 
 /* ===== VIDEO + BANNER (FIN/ENG pages) ===== */
@@ -157,12 +84,6 @@ body {
   opacity: 0; /* Piilotetaan aluksi */
   transform: translateY(40px); /* Liukuu ylös näkyviin */
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-/* ===== SCROLL EFFECT: content slides into view ===== */
-.scroll-trigger {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* RESPONSIVE STYLES */
