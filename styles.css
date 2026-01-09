@@ -322,7 +322,7 @@ button:hover{
 .index-choice{
   position: relative;
   display: inline-block;
-  color: var(--text);
+  color: var(--muted);
   text-decoration: none;
   padding: 2px 8px;
   transition: opacity 160ms ease, transform 160ms ease;
