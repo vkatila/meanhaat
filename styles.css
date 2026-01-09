@@ -163,7 +163,8 @@ body{
 }
 
 h1,h2,h3{
-  color: var(--text);
+  font-family: "Great Vibes", cursive;
+  color: var(--muted);
   margin: 28px 0 10px;
 }
 
