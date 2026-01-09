@@ -129,7 +129,6 @@
       <p>For more information, <a href="https://www.explorethenorth.se/our-lodges/matarengi-lodge" target="_blank">click here</a>.</p>
 
       <h2>RSVP</h2>
-      <!-- NOTE: Replace action with your Formspree endpoint if using GitHub Pages -->
       <form action="https://formspree.io/f/XXXXXXXX" method="POST">
         <div class="field">
           <label for="name">Name (required)</label>
@@ -167,34 +166,25 @@
 
   <script>
     // Video pyörii kerran ja piilotetaan sen jälkeen -> banneri1 tulee esiin
-      const video = document.getElementById('intro-video');
-      const banner1 = document.querySelector('.banner1');
-      const bannerContainer = document.querySelector('.banner-container');
-      const banner2 = document.querySelector('.banner2');
-      const container = document.querySelector('.container');
+    const video = document.getElementById('intro-video');
+    const banner1 = document.querySelector('.banner1');
+    const bannerContainer = document.querySelector('.banner-container');
+    const banner2 = document.querySelector('.banner2');
+    const container = document.querySelector('.container');
 
-      // Video päättyy ja banneri1 tulee näkyviin
-      video.addEventListener('ended', () => {
-        video.style.display = 'none'; // Piilotetaan video
-        banner1.style.display = 'block'; // Näytetään banneri1
-        bannerContainer.style.display = 'block'; // Näytetään koko banner-container
+    // Video päättyy ja banneri1 tulee näkyviin
+    video.addEventListener('ended', () => {
+      video.style.display = 'none'; // Piilotetaan video
+      banner1.style.display = 'block'; // Näytetään banneri1
+      bannerContainer.style.display = 'block'; // Näytetään koko banner-container
 
-        // Pienennetään video-container bannerin korkeuteen (ettei jää tyhjää 100vh-tilaa)
-        const vc = document.querySelector('.video-container');
-        vc.style.height = 'auto';
+      // Pienennetään video-container bannerin korkeuteen (ettei jää tyhjää 100vh-tilaa)
+      const vc = document.querySelector('.video-container');
+      vc.style.height = 'auto';
 
-        // Banneri2 tulee näkyviin ja muu sisältö
-        banner2.style.display = 'block'; // Näytetään banneri2
-        container.style.display = 'block'; // Näytetään muu sisältö
-      ;
-
-    // Fallback: if video can't autoplay, show content
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        if (!banner.offsetParent) {
-          content.classList.add('is-visible');
-        }
-      }, 1200);
+      // Banneri2 tulee näkyviin ja muu sisältö
+      banner2.style.display = 'block'; // Näytetään banneri2
+      container.style.display = 'block'; // Näytetään muu sisältö
     });
   </script>
 
