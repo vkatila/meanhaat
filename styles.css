@@ -99,19 +99,45 @@ body{
   display: block;
 }
 
-.banner-image{
-  display: none;
+/* ===== BANNER CONTAINER ===== */
+.banner-container {
   position: relative;
   width: 100%;
   height: auto;
-  padding-top: 56px; /* varaa tilaa FIN/ENG-valitsimelle */
 }
 
-.banner-image img{
+/* ===== BANNER 1: PYSYY PAIKALLA (fixed) ===== */
+.banner1 {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  z-index: 10; /* Varmistaa, että banneri1 on päällimmäisenä */
   display: block;
 }
+
+.banner1 img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== BANNER 2: LIIKKUU SIVUN MUKAAN ===== */
+.banner2 {
+  position: relative;
+  margin-top: 50vh; /* Siirtää banneri2:n alas, niin että se tulee banneri1:n alle */
+  display: block;
+}
+
+.banner2 img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== CONTENT (muu sisältö, menee banneri2:n alle) ===== */
+.container {
+  margin-top: 60vh; /* Puskee sisällön alas niin, että se menee banneri2:n alapuolelle */
+}
+
 
 /* ===== SIGNPOST CONTAINER ===== */
 .sign-container {
