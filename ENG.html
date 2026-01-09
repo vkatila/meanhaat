@@ -166,22 +166,28 @@
   </div>
 
   <script>
-    // Video plays once, then hides and shows banner + fades content in
-    const video = document.getElementById('intro-video');
-    const banner = document.getElementById('banner');
-    const vc = document.querySelector('.video-container');
-    const content = document.querySelector('.container');
+    // Video pyörii kerran ja piilotetaan sen jälkeen -> banneri1 tulee esiin
+      const video = document.getElementById('intro-video');
+      const banner1 = document.querySelector('.banner1');
+      const bannerContainer = document.querySelector('.banner-container');
+      const banner2 = document.querySelector('.banner2');
+      const container = document.querySelector('.container');
 
+    // Video päättyy ja banneri1 tulee näkyviin
     video.addEventListener('ended', () => {
-      video.style.display = 'none';
-      banner.style.display = 'block';
+      video.style.display = 'none'; // Piilotetaan video
+      banner1.style.display = 'block'; // Näytetään banneri1
+      bannerContainer.style.display = 'block'; // Näytetään koko banner-container
+
+    // Pienennetään video-container bannerin korkeuteen (ettei jää tyhjää 100vh-tilaa)
+      const vc = document.querySelector('.video-container');
       vc.style.height = 'auto';
-      vc.style.paddingTop = "0px";
-      
-      requestAnimationFrame(() => {
-        content.classList.add('is-visible');
-      });
-    });
+
+    // Banneri2 tulee näkyviin ja muu sisältö
+      banner2.style.display = 'block'; // Näytetään banneri2
+      container.style.display = 'block'; // Näytetään muu sisältö
+});
+
 
     // Fallback: if video can't autoplay, show content
     window.addEventListener('load', () => {
