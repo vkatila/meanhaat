@@ -125,7 +125,7 @@ body{
 /* ===== SIGN IMAGES (viitta1 & viitta2) ===== */
 .sign-img {
   width: 100%;
-  max-width: 250px;  /* Maksimi leveys, säilyttää kuvan koon */
+  max-width: 400px;  /* Maksimi leveys, säilyttää kuvan koon */
   height: auto;
   display: block;
   margin: 0 auto;
