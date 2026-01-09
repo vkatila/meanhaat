@@ -101,7 +101,7 @@ body{
 
 .banner-image {
   position: fixed; /* Kiinnitetään banneri1 paikalleen */
-  top: 50px;
+  top: 30px;
   left: 0;
   width: 100%;
   z-index: 4; /* Banneri pysyy päällimmäisenä */
@@ -110,7 +110,7 @@ body{
 
 .banner-image img {
   width: 100%;
-  height: 20%; /* Säilyttää mittasuhteet */
+  height: 100%; /* Säilyttää mittasuhteet */
   display: block;
 }
 
