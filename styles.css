@@ -113,7 +113,7 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;  /* Pysyy päällimmäisenä */
+  z-index: 10; /* Pysyy päällimmäisenä */
   display: block;
 }
 
@@ -125,7 +125,7 @@ body{
 /* ===== BANNER 2: LIIKKUU SIVUN MUKAAN (vierittäessä) ===== */
 .banner2 {
   position: relative;
-  margin-top: 100vh; /* Siirtää banneri2:n alas, niin että se menee banneri1:n alapuolelle */
+  margin-top: 0; /* Poistetaan ylimääräinen väli, että banneri2 istuu kiinni banneri1:ssä */
   display: block;
   width: 100%; /* Varmistetaan, että banneri2 on yhtä leveä kuin banneri1 */
 }
@@ -137,7 +137,10 @@ body{
 
 /* ===== CONTENT (muu sisältö menee banneri2:n alapuolelle) ===== */
 .container {
-  margin-top: 100vh;  /* Puskee sisällön alas niin, että se menee banneri2:n alapuolelle */
+  margin-top: 100vh; /* Puskee sisällön alas niin, että se menee banneri2:n alapuolelle */
+  opacity: 0; /* Piilotetaan aluksi */
+  transform: translateY(40px); /* Liukuu ylös näkyviin */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 /* ===== SIGNPOST CONTAINER ===== */
@@ -394,17 +397,17 @@ button:hover{
   }
 }
 
-/* Responsiivisuus */
-@media (max-width: 768px){
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
   .banner1 {
     height: auto;
   }
 
   .banner2 {
-    margin-top: 80vh; /* Pienempi väli mobiilissa */
+    margin-top: 80vh; /* Mobiilissa hieman pienempi väli */
   }
 
   .container {
-    margin-top: 80vh; /* Mobiilissa sisältö menee banneri2:n alapuolelle */
+    margin-top: 80vh;
   }
 }
