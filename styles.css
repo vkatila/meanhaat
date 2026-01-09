@@ -110,7 +110,7 @@ body{
 
 .banner-image img {
   width: 100%;
-  height: auto; /* Säilyttää mittasuhteet */
+  height: 20%; /* Säilyttää mittasuhteet */
   display: block;
 }
 
