@@ -68,7 +68,7 @@ body {
 /* ===== BANNER 2: LIIKKUU SIVUN MUKAAN (vierittäessä) ===== */
 .banner2 {
   position: relative;
-  margin-top: 0; /* Poistetaan ylimääräinen väli, että banneri2 istuu kiinni banneri1:ssä */
+  margin-top: 0; /* Poistetaan ylimääräinen väli, että banneri2 on kiinni banneri1:ssä */
   display: block;
   width: 100%; /* Varmistetaan, että banneri2 on yhtä leveä kuin banneri1 */
 }
