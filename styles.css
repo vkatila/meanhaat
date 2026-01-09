@@ -143,6 +143,7 @@ body{
 
 /* ===== CONTENT LAYOUT ===== */
 .container{
+  margin-top: 40vh;
   width: 100%;
   padding: 20px;
   max-width: 1200px;
@@ -372,6 +373,6 @@ button:hover{
     padding-top: 56px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
   }
   .container {
-    margin-top: 100vh; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
+    margin-top: 40vh; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
   }
 }
