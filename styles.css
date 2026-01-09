@@ -101,7 +101,7 @@ body{
 
 .banner-image {
   position: fixed; /* Kiinnitetään banneri1 paikalleen */
-  top: 56px;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 10; /* Banneri pysyy päällimmäisenä */
@@ -365,5 +365,13 @@ button:hover{
 @media (max-width: 600px){
   .sign-img{
     width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .banner-image {
+    padding-top: 56px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
+  }
+  .container {
+    margin-top: 100vh; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
   }
 }
