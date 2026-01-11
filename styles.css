@@ -372,9 +372,9 @@ button:hover{
 }
 @media (max-width: 768px) {
   .banner-image {
-    padding-top: 10px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
+    padding-top: 0px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
   }
   .container {
-    margin-top: 0%; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
+    margin-top: 15%; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
   }
 }
