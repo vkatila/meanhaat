@@ -106,7 +106,7 @@ body{
   position: fixed; /* Kiinnitetään banneri1 paikalleen */
   top: 0px;
   left: 0;
-  width: 100%;
+  width: auto;
   height: var(--banner-height);
   z-index: 4; /* Banneri pysyy päällimmäisenä */
   display: block; /* Näytetään se videon jälkeen */
