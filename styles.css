@@ -375,7 +375,7 @@ button:hover{
 }
 @media (max-width: 600px){
   .sign-img{
-    width: 20%;
+    width: 50%;
   }
 }
 @media (max-width: 768px) {
