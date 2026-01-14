@@ -8,7 +8,7 @@
   --border: rgba(230,224,218,0.9);
   --accent: #8B7E74;
   --accentHover: #7A6C60;
-  --banner-offset: clamp(140px, 20vw, 240px);
+  --banner-offset: clamp(1800px, 20vw, 320px);
 }
 
 *{ box-sizing: border-box; }
@@ -366,7 +366,7 @@ button:hover{
 @media (max-width: 768px){
   p{ font-size: 15px; }
   h2{ font-size: 24px; }
-  :root{ --banner-offset: 120px; }
+  :root{ --banner-offset: 160px; }
 }
 @media (max-width: 600px){
   .sign-img{
