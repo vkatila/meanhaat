@@ -126,7 +126,7 @@ body{
   display: flex;
   justify-content: center;
   gap: 20px; /* väli kuvien välillä */
-  flex-wrap: wrap; /* responsiivisuus, kuvat menevät allekkain mobiilissa */
+  flex-wrap: nowrap; /* responsiivisuus, kuvat menevät allekkain mobiilissa */
   margin: 20px 0;
 }
 
