@@ -91,11 +91,11 @@ body{
 
 .video-container video{
   position: absolute;
-  top: 150px;
+  top: 160px;
   left: 0;
   right: 0;
   width: 100%;
-  height: calc(100% - 150px);
+  height: calc(100% - 160px);
   object-fit: contain; /* NO CROP */
   object-position: center;
   display: block;
