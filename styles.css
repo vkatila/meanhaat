@@ -375,6 +375,6 @@ button:hover{
     padding-top: 0px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
   }
   .container {
-    margin-top: 35%; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
+    padding-top: 40px; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
   }
 }
