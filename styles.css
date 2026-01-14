@@ -8,6 +8,7 @@
   --border: rgba(230,224,218,0.9);
   --accent: #8B7E74;
   --accentHover: #7A6C60;
+  --banner-offset: clamp(140px, 20vw, 240px);
 }
 
 *{ box-sizing: border-box; }
@@ -145,9 +146,10 @@ body{
 
 /* ===== CONTENT LAYOUT ===== */
 .container{
-  margin-top: 100px;
+  margin-top: 0;
   width: 100%;
   padding: 20px;
+  padding-top: calc(20px + var(--banner-offset));
   max-width: 1200px;
   z-index: 2;
   position: relative;
@@ -364,6 +366,7 @@ button:hover{
 @media (max-width: 768px){
   p{ font-size: 15px; }
   h2{ font-size: 24px; }
+  :root{ --banner-offset: 120px; }
 }
 @media (max-width: 600px){
   .sign-img{
@@ -375,6 +378,6 @@ button:hover{
     padding-top: 0px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
   }
   .container {
-    padding-top: 100px; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
+    padding-top: calc(20px + var(--banner-offset)); /* Mobiilissa sisältö menee banneri1:n alapuolelle */
   }
 }
