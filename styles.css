@@ -1,6 +1,6 @@
 /* ========= styles.css ========= */
 :root{
-  --bg: rgba(247, 242, 241, 1);
+  --bg: rgba(253, 246, 247, 1);
   --text: #4A4A4A;
   --muted: rgba(74,74,74,0.72);
   --line: rgba(74,74,74,0.35);
@@ -165,7 +165,7 @@ body{
 
 h1,h2,h3{
   font-family: "Great Vibes", cursive;
-  color: var(--muted);
+  color: rgb(128, 109, 103);
   margin: 28px 0 10px;
 }
 
