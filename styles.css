@@ -8,7 +8,7 @@
   --border: rgba(230,224,218,0.9);
   --accent: #8B7E74;
   --accentHover: #7A6C60;
-  --banner-offset: clamp(180px, 20vw, 320px);
+  --banner-height: clamp(200px, 30vw, 360px);
 }
 
 *{ box-sizing: border-box; }
@@ -107,13 +107,15 @@ body{
   top: 0px;
   left: 0;
   width: 100%;
+  height: var(--banner-height);
   z-index: 4; /* Banneri pysyy päällimmäisenä */
   display: block; /* Näytetään se videon jälkeen */
 }
 
 .banner-image img {
   width: 100%;
-  height: 100%; /* Säilyttää mittasuhteet */
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 
@@ -149,7 +151,7 @@ body{
   margin-top: 0;
   width: 100%;
   padding: 20px;
-  padding-top: calc(20px + var(--banner-offset));
+  padding-top: calc(20px + var(--banner-height));
   max-width: 1200px;
   z-index: 2;
   position: relative;
@@ -366,7 +368,8 @@ button:hover{
 @media (max-width: 768px){
   p{ font-size: 15px; }
   h2{ font-size: 24px; }
-  :root{ --banner-offset: 160px; }
+  h3{ font-size: 18px; }
+  :root{ --banner-height: 220px; }
 }
 @media (max-width: 600px){
   .sign-img{
@@ -378,6 +381,6 @@ button:hover{
     padding-top: 0px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
   }
   .container {
-    padding-top: calc(20px + var(--banner-offset)); /* Mobiilissa sisältö menee banneri1:n alapuolelle */
+      padding-top: calc(20px + var(--banner-height)); /* Mobiilissa sisältö menee banneri1:n alapuolelle */
   }
 }
