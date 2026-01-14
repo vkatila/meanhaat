@@ -91,7 +91,7 @@ body{
 
 .video-container video{
   position: absolute;
-  top: 50px;
+  top: 150px;
   inset: 0;
   width: 100%;
   height: 100%;
@@ -144,11 +144,10 @@ body{
 
 /* ===== CONTENT LAYOUT ===== */
 .container{
-  margin-top: 50%;
+  margin-top: 150px;
   width: 100%;
   padding: 20px;
   max-width: 1200px;
-  margin: 0 auto;
   z-index: 2;
   position: relative;
 
@@ -375,6 +374,6 @@ button:hover{
     padding-top: 0px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
   }
   .container {
-    padding-top: 100px; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
+    padding-top: 150px; /* Mobiilissa sisältö menee banneri1:n alapuolelle */
   }
 }
