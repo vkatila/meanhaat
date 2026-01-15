@@ -394,3 +394,12 @@ button:hover{
       padding-top: calc(20px + var(--banner-height)); /* Mobiilissa sisältö menee banneri1:n alapuolelle */
   }
 }
+/* ===== MOBILE LINK VISIBILITY ===== */
+@media (max-width: 768px){
+  a{
+    text-decoration-thickness: 1.4px;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(74,74,74,0.5);
+    color: var(--accentHover);
+  }
+}
