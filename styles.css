@@ -20,6 +20,16 @@ body{
   color: var(--text);
   overflow-x:hidden;
 }
+/* ===== GENERAL LINKS ===== */
+a{
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--accentHover);
+  opacity: 0.85;
+}
 
 /* ===== PAPER GRAIN (subtle) ===== */
 .grain{
