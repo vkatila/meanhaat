@@ -24,11 +24,12 @@ body{
 a{
   color: var(--accent);
   text-decoration: none;
+  transition: color 160ms ease, transform 160ms ease;
 }
 
 a:hover{
   color: var(--accentHover);
-  opacity: 0.85;
+  transform: translateY(-1px);
 }
 
 /* ===== PAPER GRAIN (subtle) ===== */
