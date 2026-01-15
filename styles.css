@@ -23,13 +23,10 @@ body{
 /* ===== GENERAL LINKS ===== */
 a{
   color: var(--accent);
-  text-decoration: none;
-  transition: color 160ms ease, transform 160ms ease;
-}
-
-a:hover{
-  color: var(--accentHover);
-  transform: translateY(-1px);
+  text-decoration: underline;
+  text-decoration-thickness: 0.8px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(74,74,74,0.35);
 }
 
 /* ===== PAPER GRAIN (subtle) ===== */
