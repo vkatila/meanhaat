@@ -297,11 +297,11 @@ button:hover {
 
 @media (min-width: 768px) {
   /* Desktop Styles */
-  :root { --banner-height: 200px; } /* Adjust banner height for desktop */
+  :root { --banner-height: 100px; } /* Aseta bannerin korkeus pienemmäksi desktopille */
   
   .banner-image {
     height: var(--banner-height); /* Adjusted banner height for desktop */
-    max-height: 250px; /* Add a max-height to prevent excessive scaling */
+    max-height: 200px; /* Lisää max-height, jos tarvitaan */
   }
 
   .container {
