@@ -1,5 +1,5 @@
 /* ========= styles.css ========= */
-:root{
+:root {
   --bg: rgba(253, 246, 247, 1);
   --text: #4A4A4A;
   --muted: rgba(74,74,74,0.72);
@@ -8,20 +8,23 @@
   --border: rgba(230,224,218,0.9);
   --accent: #8B7E74;
   --accentHover: #7A6C60;
-  --banner-height: clamp(200px, 30vw, 360px);
+  --banner-height: 220px; /* Default height for mobile */
 }
 
-*{ box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body{
-  margin:0;
+body {
+  margin: 0;
   font-family: "Cormorant Garamond", serif;
   background-color: var(--bg);
   color: var(--text);
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
+
 /* ===== GENERAL LINKS ===== */
-a{
+a {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-thickness: 0.8px;
@@ -30,64 +33,26 @@ a{
 }
 
 /* ===== PAPER GRAIN (subtle) ===== */
-.grain{
+.grain {
   position: fixed;
   inset: -50%;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events: none;
-  z-index: 1; /* above bg/overlay, below UI */
+  z-index: 1;
   animation: grainMove 14s steps(1) infinite;
   opacity: 0.9;
 }
 
-@keyframes grainMove{
-  0%   { transform: translate(0,0); }
-  25%  { transform: translate(-2%, 1%); }
-  50%  { transform: translate(1%, -2%); }
-  75%  { transform: translate(2%, 1%); }
-  100% { transform: translate(0,0); }
-}
-
-/* ===== TOP LANGUAGE SWITCH (FIN/ENG pages) ===== */
-.lang-top{
-  position: fixed;
-  top: 16px;
-  right: 20px;
-  z-index: 9999;
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: rgba(74,74,74,0.75);
-  user-select: none;
-}
-
-.lang-link{
-  color: rgba(74,74,74,0.85);
-  text-decoration: none;
-  padding: 2px 4px;
-  transition: opacity 120ms ease;
-}
-
-.lang-link:hover{ opacity: 0.6; }
-
-.lang-sep{ margin: 0 4px; opacity: 0.4; }
-
-.lang-link.active{
-  font-weight: 700;
-  opacity: 1;
-  position: relative;
-}
-
-.lang-link.active::after{
-  content:"";
-  display:block;
-  height:1px;
-  background: rgba(74,74,74,0.45);
-  margin-top: 3px;
+@keyframes grainMove {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2%, 1%); }
+  50% { transform: translate(1%, -2%); }
+  75% { transform: translate(2%, 1%); }
+  100% { transform: translate(0, 0); }
 }
 
 /* ===== VIDEO + BANNER (FIN/ENG pages) ===== */
-.video-container{
+.video-container {
   position: relative;
   width: 100%;
   height: 100svh; /* mobile-friendly */
@@ -95,10 +60,10 @@ a{
   overflow: hidden;
   display: block;
   background-color: var(--bg);
-  z-index: 6; /* above bg layers */
+  z-index: 6;
 }
 
-.video-container video{
+.video-container video {
   position: absolute;
   top: 160px;
   left: 0;
@@ -115,10 +80,10 @@ a{
   top: 0px;
   left: 50%;
   width: 100%;
-  max-width: 1200px; /* Add a max-width to prevent it from becoming too wide on desktop */
+  max-width: 1200px; /* Prevent it from becoming too wide on desktop */
   transform: translateX(-50%);
   height: var(--banner-height);
-  z-index: 4; /* Banner stays on top */
+  z-index: 4;
   display: block;
   object-fit: cover; /* Ensures the image maintains its aspect ratio */
 }
@@ -135,15 +100,15 @@ a{
 .sign-container {
   display: flex;
   justify-content: center;
-  gap: 20px; /* väli kuvien välillä */
-  flex-wrap: nowrap; /* responsiivisuus, kuvat menevät allekkain mobiilissa */
+  gap: 20px;
+  flex-wrap: nowrap;
   margin: 20px 0;
 }
 
 /* ===== SIGN IMAGES (viitta1 & viitta2) ===== */
 .sign-img {
   width: 100%;
-  max-width: 400px;  /* Maksimi leveys, säilyttää kuvan koon */
+  max-width: 400px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -157,9 +122,8 @@ a{
   margin-top: 8px;
 }
 
-
 /* ===== CONTENT LAYOUT ===== */
-.container{
+.container {
   margin-top: 0;
   width: 100%;
   padding: 20px;
@@ -167,32 +131,30 @@ a{
   max-width: 1200px;
   z-index: 2;
   position: relative;
-
-  /* fade-in after intro */
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 700ms ease, transform 700ms ease;
 }
 
-.container.is-visible{
+.container.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-h1,h2,h3{
+h1, h2, h3 {
   font-family: "Great Vibes", cursive;
   color: rgb(128, 109, 103);
   margin: 28px 0 10px;
 }
 
-p{
+p {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text);
   margin: 10px 0;
 }
 
-img.content-img{
+img.content-img {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -200,15 +162,8 @@ img.content-img{
   display: block;
 }
 
-.img-caption{
-  text-align: center;
-  color: #8B7E74;
-  font-size: 14px;
-  margin-top: 8px;
-}
-
 /* Map */
-iframe.map{
+iframe.map {
   width: 100%;
   max-width: 100%;
   height: 400px;
@@ -219,18 +174,22 @@ iframe.map{
 }
 
 /* ===== FORM ===== */
-form{ margin-top: 20px; }
+form {
+  margin-top: 20px;
+}
 
-.field{ margin-bottom: 16px; }
+.field {
+  margin-bottom: 16px;
+}
 
-label{
+label {
   display: block;
   font-size: 16px;
   color: var(--text);
   margin-bottom: 8px;
 }
 
-input[type="text"], textarea{
+input[type="text"], textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -239,19 +198,19 @@ input[type="text"], textarea{
   font-size: 16px;
 }
 
-textarea{
+textarea {
   resize: vertical;
   min-height: 110px;
 }
 
-.radio-group{
+.radio-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 6px;
 }
 
-.radio-option{
+.radio-option {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -259,13 +218,13 @@ textarea{
   font-size: 16px;
 }
 
-.radio-option input{
+.radio-option input {
   width: 18px;
   height: 18px;
   margin: 0;
 }
 
-button{
+button {
   background-color: var(--accent);
   color: white;
   padding: 10px 20px;
@@ -275,12 +234,12 @@ button{
   font-size: 16px;
 }
 
-button:hover{
+button:hover {
   background-color: var(--accentHover);
 }
 
 /* ===== INDEX PAGE BACKGROUND + LANGUAGE CHOICE ===== */
-.index-bg{
+.index-bg {
   position: fixed;
   inset: 0;
   background:
@@ -289,91 +248,21 @@ button:hover{
   z-index: -2;
 }
 
-.index-overlay{
+.index-overlay {
   position: fixed;
   inset: 0;
   background: radial-gradient(circle at center, rgba(247,242,241,0.15), rgba(247,242,241,0.55));
   z-index: -1;
 }
 
-.index-lang{
+.index-lang {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /* TÄMÄ PYSYY AINA, ei animoida */
+  transform: translate(-50%, -50%);
   text-align: center;
   width: min(520px, calc(100% - 32px));
   z-index: 2;
-}
-
-/* Animoidaan vain sisäosaa */
-.index-lang-inner{
-  opacity: 0;
-  transform: translateY(10px);
-  animation: indexFadeIn 1.2s ease forwards;
-}
-
-@keyframes indexFadeIn{
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-.index-prompt{
-  font-size: 18px;
-  letter-spacing: 0.6px;
-  color: var(--muted);
-  margin: 0 0 22px 0;
-}
-
-.index-choices{
-  font-family: "Great Vibes", cursive;
-  font-size: 54px;
-  line-height: 1.15;
-  display: grid;
-  gap: 14px;
-  margin: 0;
-}
-
-.index-choice{
-  position: relative;
-  display: inline-block;
-  color: var(--muted);
-  text-decoration: none;
-  padding: 2px 8px;
-  transition: opacity 160ms ease, transform 160ms ease;
-}
-
-.index-choice::after{
-  content:"";
-  position:absolute;
-  left: 10%;
-  right: 10%;
-  bottom: -6px;
-  height: 1px;
-  background: var(--line);
-  opacity: 0;
-  transform: scaleX(0.6);
-  transition: opacity 160ms ease, transform 160ms ease;
-}
-
-.index-choice:hover{
-  opacity: 0.85;
-  transform: translateY(-2px);
-}
-
-.index-choice:hover::after{
-  opacity: 1;
-  transform: scaleX(1);
-}
-
-.index-hint{
-  margin-top: 22px;
-  font-size: 16px;
-  color: var(--muted);
-  letter-spacing: 0.4px;
 }
 
 /* ===== Responsive ===== */
@@ -408,9 +297,11 @@ button:hover{
 
 @media (min-width: 768px) {
   /* Desktop Styles */
+  :root { --banner-height: 200px; } /* Adjust banner height for desktop */
+  
   .banner-image {
-    height: 200px; /* Adjust banner height for desktop */
-    max-height: 300px; /* Add a max-height to prevent excessive scaling */
+    height: var(--banner-height); /* Adjusted banner height for desktop */
+    max-height: 250px; /* Add a max-height to prevent excessive scaling */
   }
 
   .container {
