@@ -8,7 +8,7 @@
   --border: rgba(230,224,218,0.9);
   --accent: #8B7E74;
   --accentHover: #7A6C60;
-  --banner-height: 220px; /* Default height for mobile */
+  --banner-height: 100px; /* Default height for mobile */
 }
 
 * {
@@ -301,7 +301,7 @@ button:hover {
   
   .banner-image {
     height: var(--banner-height); /* Adjusted banner height for desktop */
-    max-height: 200px; /* Lisää max-height, jos tarvitaan */
+    max-height: 100px; /* Lisää max-height, jos tarvitaan */
   }
 
   .container {
