@@ -390,7 +390,7 @@ button:hover{
 }
 @media (min-width: 768px) {
   .banner-image {
-    height: 360px; /* Adjust the height specifically for desktop */
+    height: 200px; /* Adjust the height specifically for desktop */
   }
   .container {
       padding-top: calc(20px + var(--banner-height)); /* Mobiilissa sisältö menee banneri1:n alapuolelle */
