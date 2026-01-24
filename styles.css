@@ -389,7 +389,8 @@ button:hover{
   }
   
   .banner-image {
-    height: 220px; /* Adjust banner height for mobile */
+    height: var(--banner-height); /* Banner height for mobile */
+    max-height: 220px; /* Prevents banner from growing too large */
   }
   
   .container {
@@ -409,6 +410,7 @@ button:hover{
   /* Desktop Styles */
   .banner-image {
     height: 200px; /* Adjust banner height for desktop */
+    max-height: 300px; /* Add a max-height to prevent excessive scaling */
   }
 
   .container {
