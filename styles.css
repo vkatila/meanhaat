@@ -111,14 +111,16 @@ a{
 }
 
 .banner-image {
-  position: fixed; /* Kiinnitetään banneri1 paikalleen */
+  position: fixed;
   top: 0px;
   left: 50%;
-  width: 100vw;
+  width: 100%;
+  max-width: 1200px; /* Add a max-width to prevent it from becoming too wide on desktop */
   transform: translateX(-50%);
   height: var(--banner-height);
-  z-index: 4; /* Banneri pysyy päällimmäisenä */
-  display: block; /* Näytetään se videon jälkeen */
+  z-index: 4; /* Banner stays on top */
+  display: block;
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
 }
 
 .banner-image img {
@@ -386,9 +388,9 @@ button:hover{
     width: 100%;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .banner-image {
-    padding-top: 0px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
+    height: 360px; /* Adjust the height specifically for desktop */
   }
   .container {
       padding-top: calc(20px + var(--banner-height)); /* Mobiilissa sisältö menee banneri1:n alapuolelle */
@@ -401,5 +403,10 @@ button:hover{
     text-underline-offset: 4px;
     text-decoration-color: rgba(74,74,74,0.5);
     color: var(--accentHover);
+  }
+}
+@media (max-width: 768px) {
+  .banner-image {
+    height: 220px; /* Adjust the height for mobile */
   }
 }
