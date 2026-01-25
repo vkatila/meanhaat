@@ -404,13 +404,14 @@ button:hover{
   }
 }
 
-/* For larger screens (desktop) */
+/* Adjust the banner for larger screens (desktop) */
 @media (min-width: 769px) {
   :root {
-    --banner-height: 200px; /* Adjust this value as needed */
+    --banner-height: 20vh; /* Set the banner height to 20% of the viewport height */
   }
 
   .banner-image {
     height: var(--banner-height);
+    top: 0; /* Keep it aligned to the top, or adjust as needed */
   }
 }
