@@ -404,10 +404,9 @@ button:hover{
   }
 }
 
-/* Desktop Banner */
+/* For desktop */
 @media (min-width: 769px) {
   .banner-image {
-    background-image: url('images/uusbanneri.png'); /* Desktop banner image */
-    height: 20vh; /* Adjust this to 20% of the viewport height */
+    display: none; /* Hide the banner on desktop */
   }
 }
