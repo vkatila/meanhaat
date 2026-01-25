@@ -403,3 +403,14 @@ button:hover{
     color: var(--accentHover);
   }
 }
+
+/* For larger screens (desktop) */
+@media (min-width: 769px) {
+  :root {
+    --banner-height: 200px; /* Adjust this value as needed */
+  }
+
+  .banner-image {
+    height: var(--banner-height);
+  }
+}
