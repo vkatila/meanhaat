@@ -404,14 +404,10 @@ button:hover{
   }
 }
 
-/* Adjust the banner for larger screens (desktop) */
+/* Desktop Banner */
 @media (min-width: 769px) {
-  :root {
-    --banner-height: 20vh; /* Set the banner height to 20% of the viewport height */
-  }
-
   .banner-image {
-    height: var(--banner-height);
-    top: 0; /* Keep it aligned to the top, or adjust as needed */
+    background-image: url('images/uusbanneri.png'); /* Desktop banner image */
+    height: 20vh; /* Adjust this to 20% of the viewport height */
   }
 }
