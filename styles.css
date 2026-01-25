@@ -407,7 +407,7 @@ button:hover{
 /* Desktop Banner */
 @media (min-width: 769px) {
   .banner-image {
-    background-image: url('images/desktop-banner.jpg'); /* Desktop banner image */
+    background-image: url('images/uusbanner.png'); /* Desktop banner image */
     height: 20vh; /* Adjust this to 20% of the viewport height */
   }
 }
