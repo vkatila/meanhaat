@@ -404,14 +404,10 @@ button:hover{
   }
 }
 
-/* For desktop */
+/* Desktop Banner */
 @media (min-width: 769px) {
   .banner-image {
-    display: none; /* Hide the banner on desktop */
+    background-image: url('images/desktop-banner.jpg'); /* Desktop banner image */
+    height: 20vh; /* Adjust this to 20% of the viewport height */
   }
-}
-
-/* Prevent the banner from showing after video */
-.video-container + .banner-image {
-  display: none; /* Ensure banner does not appear after video */
 }
