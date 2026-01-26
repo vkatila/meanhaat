@@ -282,7 +282,7 @@ button:hover{
   position: fixed;
   inset: 0;
   background:
-    url("images/bannerikielet.png") center top / contain no-repeat,
+    url("images/banneri.png") center top / contain no-repeat,
     var(--bg);
   z-index: -2;
 }
