@@ -410,3 +410,7 @@ button:hover{
     color: var(--accentHover);
   }
 }
+
+.index.page .index-lang{
+  top: calc(50% + 120px);
+}
