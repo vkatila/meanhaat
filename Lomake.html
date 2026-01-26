@@ -32,41 +32,122 @@
   <div class="container is-visible">
     <section class="content">
 
-      <h2>Ilmottautuminen</h2>
+      <h2>Jokhaisen häätyy ilmottautua eriksheen!</h2>
       <p>
-        Tällä lomakheela sie saatat meille kertua oleks tulossa vai et. Tähän häätyys myös laittaa jos on jothain erityis ruokavaliota tai muuta mitä meän häätys huomioia. Jos vielä kehtaat kirjata jos väljaat jommankumman meän suosittelemista 
+        Tällä lomakheela sie saatat meille kertua oleks tulossa vai et. Tähän häätyys myös laittaa jos on jothain erityis ruokavaliota 
+        tai muuta mitä meän häätys huomioia. Jos vielä kehtaat kirjata jos väljaat jommankumman meän suosittelemista 
         majotuskohtheista niin solis hyä.
       </p>
 
   <!-- NOTE: Replace action with your Formspree endpoint if using GitHub Pages -->
-      <form action="https://formspree.io/f/XXXXXXXX" method="POST">
-        <div class="field">
-          <label for="name">Nimi (häätyy laittaa)</label>
-          <input type="text" id="name" name="name" required placeholder="Etunimi Sukunimi" />
-        </div>
+<form action="https://formspree.io/f/XXXXXXXX" method="POST">
+  <!-- ETUNIMI -->
+  <div class="field">
+    <label for="firstName">Etunimi (häätyy laittaa)</label>
+    <input
+      type="text"
+      id="firstName"
+      name="Etunimi"
+      required
+      autocomplete="given-name"
+      placeholder="Etunimi"
+    />
+  </div>
 
-        <div class="field">
-          <label>Osallistuminen (tämäki häätyy laittaa)</label>
-          <div class="radio-group">
-            <label class="radio-option">
-              <input type="radio" name="attendance" value="Osallistun" required />
-              Saatan mie vain tullakki
-            </label>
+  <!-- SUKUNIMI -->
+  <div class="field">
+    <label for="lastName">Sukunimi (tämäki häätyy laittaa)</label>
+    <input
+      type="text"
+      id="lastName"
+      name="Sukunimi"
+      required
+      autocomplete="family-name"
+      placeholder="Sukunimi"
+    />
+  </div>
 
-            <label class="radio-option">
-              <input type="radio" name="attendance" value="Valitettavasti en pääse osallistumhaan" required />
-              Sunkhaan mie pääse tulheen
-            </label>
-          </div>
-        </div>
+  <!-- OSALLISTUMINEN -->
+  <div class="field">
+    <label>Osallistuminen (väljaa toinen)</label>
+    <div class="radio-group">
+      <label class="radio-option">
+        <input type="radio" name="Osallistuminen" value="Saatan mie vain tullakki" required />
+        Osallistun
+      </label>
 
-        <div class="field">
-          <label for="message">Lisätieot (esim. ruoka-allergiat, majottuminen yms.)</label>
-          <textarea id="message" name="message" placeholder="Kirjoita tähän"></textarea>
-        </div>
+      <label class="radio-option">
+        <input type="radio" name="Osallistuminen" value="Valitettavasti en pääse osallistumhaan" required />
+        En osallistu
+      </label>
+    </div>
+  </div>
 
-        <button type="submit">Lähetä ilmottautuminen</button>
-      </form>
+  <!-- ERITYISRUOKAVALIOT -->
+  <div class="field">
+    <label for="diet">Erityistuokavaliot (kirjaa jos jothain)</label>
+    <input
+      type="text"
+      id="diet"
+      name="Erityisruokavalio"
+      placeholder="Esim. gluteeniton, vegaani, pähkinäallergia…"
+    />
+  </div>
+
+  <!-- MAJOITUS -->
+  <div class="field">
+    <label for="accommodation">Majotus (laita tähän jos tiät jo missä soovaat)</label>
+    <input
+      type="text"
+      id="accommodation"
+      name="Majoitus"
+      placeholder="Esim. Lapland View Lodge / Matarengi Lodge / Menen kotia / muu…"
+    />
+  </div>
+
+  <!-- SOITTOLISTA -->
+  <div class="field">
+    <label for="playlist">Soittolista unelmahäihin (jos vain kehtaat niin laita ehotuksia)</label>
+    <textarea
+      id="playlist"
+      name="Soittolista"
+      placeholder="Ehota meille: 1) häävalssi 2) illallismusikkia 3) täyellinen fästibiisi"
+    ></textarea>
+  </div>
+
+  <!-- KULJETUKSET -->
+  <div class="field">
+    <label>Kuljetukset (jos tiät jo nytten)</label>
+
+    <div class="radio-group">
+      <label class="radio-option">
+        <input
+          type="checkbox"
+          name="Kuljetukset[]"
+          value="Onnikka: Lapland View Lodge / Matarengi Lodge → Kirkko"
+        />
+        Osallistun bussikuljetukseen Lapland View Lodge / Matarengi Lodge → Kirkko
+      </label>
+
+      <label class="radio-option">
+        <input
+          type="checkbox"
+          name="Kuljetukset[]"
+          value="Onnikka: Kirkko → Lapland View Lodge"
+        />
+        Osallistun bussikuljetukseen Kirkko → Lapland View Lodge
+      </label>
+
+      <label class="radio-option">
+        <input type="checkbox" name="Kuljetukset[]" value="Liikun omala biililä" />
+        Liikun omalla autolla
+      </label>
+    </div>
+  </div>
+
+  <button type="submit">Lähetä ilmottautuminen</button>
+</form>
+
 
       <h2>Vappaaehtonen WhatsApp lekiö</h2>
       <p>
