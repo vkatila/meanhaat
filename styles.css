@@ -387,12 +387,6 @@ button:hover{
   }
 }
 
-@media (min-width: 1024px){
-  :root{
-    --banner-height: 240px;
-  }
-}
-
 @media (max-width: 768px) {
   .banner-image {
     padding-top: 0px; /* varaa tilaa kielivalitsimelle mobiililaitteissa */
@@ -414,3 +408,13 @@ button:hover{
 .index.page .index-lang{
   top: calc(50% + 120px);
 }
+
+@media (min-width: 1024px){
+  :container{
+    max-width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
