@@ -277,6 +277,11 @@ button:hover{
   background-color: var(--accentHover);
 }
 
+/* ===== INDEX PAGE push content lower ===== */
+.index-page .index.lang{
+  top: calc(50% + 60px);
+  }
+
 /* ===== INDEX PAGE BACKGROUND + LANGUAGE CHOICE ===== */
 .index-bg{
   position: fixed;
