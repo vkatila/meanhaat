@@ -47,7 +47,17 @@ a{
   50%  { transform: translate(1%, -2%); }
   75%  { transform: translate(2%, 1%); }
   100% { transform: translate(0,0); }
+
+/* ===== BACKGROUNG ON ALL PAGES ===== */
 }
+
+.index-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(247,242,241,0.15), rgba(247,242,241,0.55));
+  z-index: -1;
+}
+
 
 /* ===== TOP LANGUAGE SWITCH (FIN/ENG pages) ===== */
 .lang-top{
