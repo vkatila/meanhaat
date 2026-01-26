@@ -297,16 +297,11 @@ button:hover{
 .index-lang{
   position: fixed;
   left: 50%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%); /* TÄMÄ PYSYY AINA, ei animoida */
   text-align: center;
   width: min(520px, calc(100% - 32px));
   z-index: 2;
-}
-
-/* ===== INDEX PAGE push content lower ===== */
-.index-page .index-lang{
-  top: calc(50% + var(--banner-height) / 2));
 }
 
 /* Animoidaan vain sisäosaa */
