@@ -411,7 +411,8 @@ button:hover{
 
 @media (min-width: 1024px){
   :container{
-    max-width: 50vw;
+    width: 50vw;
+    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
   }
