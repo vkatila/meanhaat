@@ -1,0 +1,164 @@
+<!-- ========= Form.html ========= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satu & Ville – 25.7.2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- TOP LANGUAGE SWITCH -->
+  <nav class="lang-top" aria-label="Language selection">
+    <a href="FIN.html" class="lang-link">Takasin</a>
+    <span class="lang-sep"></span>
+    <span class="lang-link active" aria-current="page"></span>
+  </nav>
+
+  <!-- BANNER (shown after video) -->
+  <div class="banner-image" id="banner">
+    <img src="images/banneri.png" alt="Hääbanneri" />
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container is-visible">
+    <section class="content">
+
+      <h2>Each invited person must fill in the form separately!</h2>
+      <p>
+        Tällä lomakheela sie saatat meille kertua oleks tulossa vai et. Tähän häätyys myös laittaa jos on jothain erityis ruokavaliota 
+        tai muuta mitä meän häätys huomioia. Jos vielä kehtaat kirjata jos väljaat jommankumman meän suosittelemista 
+        majotuskohtheista niin solis hyä.
+      </p>
+
+  <!-- NOTE: Replace action with your Formspree endpoint if using GitHub Pages -->
+<form action="https://formspree.io/f/XXXXXXXX" method="POST">
+  <!-- ETUNIMI -->
+  <div class="field">
+    <label for="firstName">First Name (Required)</label>
+    <input
+      type="text"
+      id="firstName"
+      name="Etunimi"
+      required
+      autocomplete="given-name"
+      placeholder="Etunimi"
+    />
+  </div>
+
+  <!-- SUKUNIMI -->
+  <div class="field">
+    <label for="lastName">Last Name (Required)</label>
+    <input
+      type="text"
+      id="lastName"
+      name="Sukunimi"
+      required
+      autocomplete="family-name"
+      placeholder="Sukunimi"
+    />
+  </div>
+
+  <!-- OSALLISTUMINEN -->
+  <div class="field">
+    <label>Atttendance (Required)</label>
+    <div class="radio-group">
+      <label class="radio-option">
+        <input type="radio" name="Osallistuminen" value="Osallistun" required />
+        I will gladly accept your invitation
+      </label>
+
+      <label class="radio-option">
+        <input type="radio" name="Osallistuminen" value="En osallistu" required />
+        Unfortunately I am unable to attend your wedding
+      </label>
+    </div>
+  </div>
+
+  <!-- ERITYISRUOKAVALIOT -->
+  <div class="field">
+    <label for="diet">Dietary requirements (optional)</label>
+    <input
+      type="text"
+      id="diet"
+      name="Erityisruokavalio"
+      placeholder="e.g. vegetarian, gluten-free, allergies…"
+    />
+  </div>
+
+  <!-- MAJOITUS -->
+  <div class="field">
+    <label for="accommodation">Accommodation (optional, if you already know)</label>
+    <input
+      type="text"
+      id="accommodation"
+      name="Majoitus"
+      placeholder="e.g. Lapland View Lodge / Matarengi Lodge / other…"
+    />
+  </div>
+
+  <!-- SOITTOLISTA -->
+  <div class="field">
+    <label for="playlist">Playlist for our dream wedding (optional)</label>
+    <textarea
+      id="playlist"
+      name="Soittolista"
+      placeholder="Suggest: 1) wedding waltz 2) dinner music 3) the perfect party song"
+    ></textarea>
+  </div>
+
+  <!-- KULJETUKSET -->
+  <div class="field">
+    <label>Transportation (optional, if you already know)</label>
+
+    <div class="radio-group">
+      <label class="radio-option">
+        <input
+          type="checkbox"
+          name="Kuljetukset[]"
+          value="Bussi: Lapland View Lodge / Matarengi Lodge → Kirkko"
+        />
+        I will take the bus: Lapland View Lodge / Matarengi Lodge → Church
+      </label>
+
+      <label class="radio-option">
+        <input
+          type="checkbox"
+          name="Kuljetukset[]"
+          value="Onnikka: Kirkko → Lapland View Lodge"
+        />
+        I will take the bus: Church → Lapland View Lodge
+      </label>
+
+      <label class="radio-option">
+        <input type="checkbox" name="Kuljetukset[]" value="Liikun omala biililä" />
+        I have my on transportation
+      </label>
+    </div>
+  </div>
+
+  <button type="submit">Send RSVP</button>
+</form>
+
+
+      <h2>Voluntary WhatsApp group</h2>
+      <p>
+      Ilmottautumisen jälkheen saatat liittyä WhatApp lekiöön jossa ilmotama häihin liittyviä asioita. 
+      Sielä saatat myös kysyä ylheisiä juttuja mitä et täältä saattanu löytää. Jos halvat niin 
+      <a href="https://chat.whatsapp.com/DhAU6BjMVCN8hlZf1EVPSW">trykkää tästä</a>
+
+      </p>
+
+    </section>
+  </div>
+
+</body>
+</html>
