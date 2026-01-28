@@ -179,32 +179,33 @@
   </div>
 
   <script>
-    // Video plays once, then hides and shows banner + fades content in
-    const video = document.getElementById('intro-video');
-    const banner = document.getElementById('banner');
-    const vc = document.querySelector('.video-container');
-    const content = document.querySelector('.container');
+  const introImg = document.getElementById('intro-image');
+  const banner = document.getElementById('banner');
+  const vc = document.querySelector('.video-container');
+  const content = document.querySelector('.container');
 
-    video.addEventListener('ended', () => {
-      video.style.display = 'none';
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      // fade out intro image
+      introImg.classList.add('is-hidden');
+
+      // after fade, remove it
+      setTimeout(() => {
+        introImg.style.display = 'none';
+      }, 520);
+
+      // show banner + content
       banner.style.display = 'block';
       vc.style.height = 'auto';
       vc.style.paddingTop = "40px";
-      
+
       requestAnimationFrame(() => {
         content.classList.add('is-visible');
       });
-    });
+    }, 4000);
+  });
+</script>
 
-    // Fallback: if video can't autoplay, show content
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        if (!banner.offsetParent) {
-          content.classList.add('is-visible');
-        }
-      }, 1200);
-    });
-  </script>
 
 </body>
 </html>
