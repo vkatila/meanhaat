@@ -94,7 +94,9 @@ a{
   transform: translateX(-50%);
   height: var(--banner-height);
   z-index: 4;
-  display: block;
+
+  background: var(--bg); /* <- tämä tekee “taustablokit” */
+  overflow: hidden;      /* <- varmistaa ettei mikään valu yli */
 }
 
 .banner-image img{
