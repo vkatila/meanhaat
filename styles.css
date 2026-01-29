@@ -249,9 +249,7 @@ button:hover{
 .index-bg{
   position: fixed;
   inset: 0;
-  background:
-    url("images/banneri.png") center top / contain no-repeat,
-    var(--bg);
+  background: var(--bg);
   z-index: -2;
 }
 
@@ -340,6 +338,12 @@ button:hover{
   letter-spacing: 0.4px;
 }
 
+@media (min-width: 769px){
+  .index-page .index-lang{
+    top: calc(50% + (var(--banner-height) / 2));
+  }
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px){
   p{ font-size: 15px; }
@@ -364,3 +368,4 @@ button:hover{
     margin-right: auto;
   }
 }
+
