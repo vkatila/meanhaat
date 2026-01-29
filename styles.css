@@ -6,9 +6,7 @@
   --line: rgba(74,74,74,0.35);
   --accent: #8B7E74;
   --accentHover: #7A6C60;
-
-  /* Desktop: 4x matalampi kuin ennen */
-  --banner-height: clamp(50px, 7.5vw, 90px);
+  --banner-height: clamp(200px, 30vw, 360px);
 }
 
 *{ box-sizing: border-box; }
@@ -96,14 +94,14 @@ a{
   transform: translateX(-50%);
   height: var(--banner-height);
   z-index: 4;
-  overflow: hidden;
+  display: block;
 }
 
 .banner-image img{
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;          /* fixed */
   object-fit: contain;
-  object-position: center;
   display: block;
 }
 
