@@ -23,22 +23,14 @@
     <span class="lang-link active" aria-current="page">FIT</span>
   </nav>
 
-  <!-- VIDEO (shown first) -->
-  <div class="video-container">
-    <video id="intro-video" autoplay muted playsinline preload="auto">
-      <source src="videos/Testi.mp4" type="video/mp4" />
-      Videon toisto ei ole tuettu.
-    </video>
 
-    <!-- BANNER (shown after video) -->
-    <div class="banner-image" id="banner">
-      <img src="images/banneri.png" alt="Hääbanneri" />
-    </div>
-  </div>
 
   <!-- CONTENT -->
-  <div class="container">
+  <div class="container is-visible">
     <section class="content">
+
+      <img class="content-img" src="images/kadet.jpeg" alt="Sormukset käsien päälä">
+      
       <p>
         Met olema rohki ilosia ko saama kuttua teät väärtit ja grannit fästäähmään meän naimissiinmenoa. 
         Tältä weppisivulta saatat lukea enämpi häitten tioista. Net tiot, että ketäh nolikhaan, missäh non, 
@@ -172,34 +164,6 @@
 
     </section>
   </div>
-
-  <script>
-    // Video plays once, then hides and shows banner + fades content in
-    const video = document.getElementById('intro-video');
-    const banner = document.getElementById('banner');
-    const vc = document.querySelector('.video-container');
-    const content = document.querySelector('.container');
-
-    video.addEventListener('ended', () => {
-      video.style.display = 'none';
-      banner.style.display = 'block';
-      vc.style.height = 'auto';
-      vc.style.paddingTop = "40px";
-
-      requestAnimationFrame(() => {
-        content.classList.add('is-visible');
-      });
-    });
-
-    // Fallback: if video can't autoplay, show content
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        if (!banner.offsetParent) {
-          content.classList.add('is-visible');
-        }
-      }, 1200);
-    });
-  </script>
 
 </body>
 </html>
