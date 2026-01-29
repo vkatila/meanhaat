@@ -23,20 +23,21 @@
     <span class="lang-link active" aria-current="page">ENG</span>
   </nav>
 
-  <!-- INTRO IMAGE (shown first) -->
-  <div class="video-container">
-    <img
-      id="intro-image"
-      class="intro-image"
-      src="images/Kädet.jpg"
-      alt="Wedding intro"
-    />
+  <!-- INTRO OVERLAY (shows 4s, then fades out) -->
+<div class="intro-splash" id="intro-splash" aria-hidden="true">
+  <img src="images/intro.jpg" alt="">
+</div>
+
+<!-- BANNER (shown after intro) -->
+<div class="banner-image" id="banner" style="display:none;">
+  <img src="images/banneri.png" alt="Wedding banner" />
+</div>
+
 
     <!-- BANNER (shown after intro image) -->
     <div class="banner-image" id="banner" style="display:none;">
       <img src="images/banneri.png" alt="Wedding banner" />
     </div>
-  </div>
 
   <!-- CONTENT -->
   <div class="container">
@@ -182,33 +183,22 @@
   </div>
 
   <script>
-  const introImg = document.getElementById('intro-image');
+  const splash = document.getElementById('intro-splash');
   const banner = document.getElementById('banner');
-  const vc = document.querySelector('.video-container');
   const content = document.querySelector('.container');
 
   window.addEventListener('load', () => {
     setTimeout(() => {
-      // fade out intro image
-      introImg.classList.add('is-hidden');
-
-      // after fade, remove it
-      setTimeout(() => {
-        introImg.style.display = 'none';
-      }, 520);
-
-      // show banner + content
+      // show the page
       banner.style.display = 'block';
-      vc.style.height = 'auto';
-      vc.style.paddingTop = "40px";
+      content.classList.add('is-visible');
 
-      requestAnimationFrame(() => {
-        content.classList.add('is-visible');
-      });
+      // fade out + remove splash
+      splash.classList.add('is-hidden');
+      setTimeout(() => splash.remove(), 650);
     }, 4000);
   });
-</script>
-
-
+  </script>
+  
 </body>
 </html>
