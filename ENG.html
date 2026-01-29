@@ -23,26 +23,18 @@
     <span class="lang-link active" aria-current="page">ENG</span>
   </nav>
 
-  <!-- INTRO OVERLAY (shows 4s, then fades out) -->
-<div class="intro-splash" id="intro-splash" aria-hidden="true">
-  <img src="images/Kädet.jpeg" alt="">
-</div>
+  <!-- BANNER (always visible) -->
+  <div class="banner-image" id="banner">
+    <img src="images/banneri.png" alt="Wedding banner" />
+  </div>
 
-<!-- BANNER (shown after intro) -->
-<div class="banner-image" id="banner" style="display:none;">
-  <img src="images/banneri.png" alt="Wedding banner" />
-</div>
-
-
-    <!-- BANNER (shown after intro image) -->
-    <div class="banner-image" id="banner" style="display:none;">
-      <img src="images/banneri.png" alt="Wedding banner" />
-    </div>
 
   <!-- CONTENT -->
-  <div class="container">
+  <div class="container is-visible">
     <section class="content">
 
+      <img class="content-img" src="images/Kädet.jpeg" alt="Hands holding rings">
+      
       <p>
         We’re happy to invite you to celebrate our day with us.
         On this page you’ll find all the important wedding details – from the venues and how to get there
@@ -182,23 +174,6 @@
     </section>
   </div>
 
-  <script>
-  const splash = document.getElementById('intro-splash');
-  const banner = document.getElementById('banner');
-  const content = document.querySelector('.container');
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      // show the page
-      banner.style.display = 'block';
-      content.classList.add('is-visible');
-
-      // fade out + remove splash
-      splash.classList.add('is-hidden');
-      setTimeout(() => splash.remove(), 650);
-    }, 4000);
-  });
-  </script>
   
 </body>
 </html>
