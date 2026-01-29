@@ -99,9 +99,9 @@ a{
 
 .banner-image img{
   width: 100%;
-  max-width: 100%;
-  height: auto;          /* fixed */
+  height: 100%;
   object-fit: contain;
+  object-position: center;
   display: block;
 }
 
