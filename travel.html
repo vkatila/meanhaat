@@ -206,6 +206,18 @@
       then here are some recommendations. We also include recommendations for Oulu since it is the European Capital of Culture
       in 2026 and relatively close to the wedding venue (at least from a Lappish perspective).
     </p>
+    
+    <!-- Availability (button + short intro) -->
+<div class="callout" id="availability">
+  <p style="margin:0;">
+    Want to meet up during your trip? We’ll share our availability here.
+  </p>
+  <p style="margin:10px 0 0;">
+    <button type="button" class="filter-btn" id="openAvailability" aria-haspopup="dialog">
+      Read our availability
+    </button>
+  </p>
+</div>
 
     <div class="callout">
       <strong>Quick heads-up:</strong> opening hours and seasonal availability can change — please double-check official pages before you go.
@@ -566,6 +578,40 @@
         </article>
       </div>
     </section>
+    
+    <!-- Availability modal -->
+<div class="availability-modal" id="availabilityModal" role="dialog" aria-modal="true" aria-labelledby="availabilityTitle" aria-hidden="true">
+  <div class="availability-modal__backdrop" data-close="1"></div>
+
+  <div class="availability-modal__panel" role="document">
+    <div class="availability-modal__header">
+      <h3 id="availabilityTitle" style="margin:0;">Our availability</h3>
+      <button type="button" class="availability-modal__close" id="closeAvailability" aria-label="Close">×</button>
+    </div>
+
+    <div class="availability-modal__body">
+      <p>
+        During the wedding week we’ll be quite busy and mostly unavailable from Thursday until the wedding day.
+      </p>
+
+      <p>
+        We’re planning to stay Sunday–Monday night at <strong>Lapland View Hotel</strong> to enjoy a lazy morning and afternoon in the spa,
+        and to have dinner at the nearby restaurant <strong>Kàttilà</strong>, which offers great food and a spectacular view of the
+        <strong>Tornionjoki</strong> river. You are very welcome to join us.
+      </p>
+
+      <p>
+        On Monday, we plan to return to Rovaniemi and we’ll be available if anyone staying longer would like to spend time with us.
+        We can also arrange something special in Rovaniemi for all friends.
+      </p>
+
+      <p style="margin-bottom:0;">
+        <button type="button" class="filter-btn" data-close="1">Close</button>
+      </p>
+    </div>
+  </div>
+</div>
+    
   </main>
 
   <script>
