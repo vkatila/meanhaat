@@ -13,173 +13,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <!-- Page-specific styling for cards/filtering (uses your CSS variables & typography) -->
-  <style>
-    /* Anchor jumps should land below fixed banner */
-    section { scroll-margin-top: calc(var(--banner-height) + 18px); }
-
-    /* Soft in-page nav that fits the wedding style */
-    .subnav{
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 12px 0;
-      margin: 18px 0 22px;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .subnav a{
-      text-decoration: none;
-      letter-spacing: 0.4px;
-      padding: 2px 6px;
-      border-radius: 6px;
-    }
-    .subnav a:hover{
-      background: rgba(139,126,116,0.10);
-      text-decoration: none;
-    }
-
-    /* Filter buttons */
-    .filters{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 12px 0 14px;
-    }
-    .filter-btn{
-      appearance: none;
-      font-family: inherit;
-      font-size: 14px;
-      letter-spacing: 0.4px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(74,74,74,0.28);
-      background: rgba(255,255,255,0.35);
-      color: var(--text);
-      cursor: pointer;
-      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease, opacity 120ms ease;
-    }
-    .filter-btn:hover{
-      background: rgba(139,126,116,0.12);
-      transform: translateY(-1px);
-    }
-    .filter-btn[aria-pressed="true"]{
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-    }
-
-    /* Card grid */
-    .card-grid{
-      display: grid;
-      gap: 14px;
-      grid-template-columns: repeat(12, 1fr);
-      margin-bottom: 10px;
-    }
-    @media (max-width: 900px){
-      .card-grid{ grid-template-columns: 1fr; }
-    }
-
-    .card{
-      grid-column: span 6;
-      border: 1px solid rgba(74,74,74,0.22);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.42);
-      box-shadow: 0 8px 22px rgba(74,74,74,0.08);
-      overflow: hidden;
-    }
-    @media (max-width: 900px){
-      .card{ grid-column: span 12; }
-    }
-
-    .card-inner{
-      padding: 14px 14px 16px;
-    }
-
-    .card-kicker{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-      color: var(--muted);
-      font-size: 12px;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-    }
-
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(74,74,74,0.22);
-      background: rgba(253,246,247,0.60);
-      color: rgba(74,74,74,0.75);
-      white-space: nowrap;
-    }
-
-    /* Card title: keep readable serif (not Great Vibes) */
-    .card-title{
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 600;
-      font-size: 18px;
-      margin: 0 0 6px;
-      color: var(--text);
-      letter-spacing: 0.2px;
-    }
-
-    .card p{
-      margin: 8px 0;
-      color: var(--text);
-    }
-
-    .card ul{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--text);
-    }
-    .card li{ margin: 6px 0; line-height: 1.6; }
-
-    .card-links{
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .card-links a{
-      text-decoration: underline;
-      text-decoration-thickness: 0.8px;
-      text-underline-offset: 3px;
-    }
-
-    .callout{
-      border: 1px solid rgba(74,74,74,0.22);
-      border-radius: 8px;
-      padding: 12px 14px;
-      background: rgba(255,255,255,0.35);
-      margin: 14px 0 18px;
-      color: var(--muted);
-    }
-
-    .divider{
-      height: 1px;
-      background: var(--line);
-      margin: 22px 0;
-    }
-
-    .small{
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 10px;
-    }
-  </style>
 </head>
 
 <body>
@@ -206,18 +39,18 @@
       then here are some recommendations. We also include recommendations for Oulu since it is the European Capital of Culture
       in 2026 and relatively close to the wedding venue (at least from a Lappish perspective).
     </p>
-    
+
     <!-- Availability (button + short intro) -->
-<div class="callout" id="availability">
-  <p style="margin:0;">
-    Want to meet up during your trip? We’ll share our availability here.
-  </p>
-  <p style="margin:10px 0 0;">
-    <button type="button" class="filter-btn" id="openAvailability" aria-haspopup="dialog">
-      Read our availability
-    </button>
-  </p>
-</div>
+    <div class="callout" id="availability">
+      <p class="callout__p">
+        Want to meet up during your trip? We’ll share our availability here.
+      </p>
+      <p class="callout__actions">
+        <button type="button" class="filter-btn" id="openAvailability" aria-haspopup="dialog">
+          Read our availability
+        </button>
+      </p>
+    </div>
 
     <div class="callout">
       <strong>Quick heads-up:</strong> opening hours and seasonal availability can change — please double-check official pages before you go.
@@ -387,73 +220,60 @@
             </div>
           </div>
         </article>
+
+        <!-- City centre hotels (Rovaniemi) -->
+        <article class="card" data-type="stay">
+          <div class="card-inner">
+            <div class="card-kicker">
+              <span class="pill">Accommodation</span>
+              <span class="pill">City centre</span>
+            </div>
+            <h4 class="card-title">City centre hotels</h4>
+            <p>Easy base if you want to walk to restaurants, shops, and the riverfront.</p>
+            <ul>
+              <li>
+                <a href="https://www.scandichotels.com/en/hotels/scandic-pohjanhovi" target="_blank" rel="noopener">Scandic Pohjanhovi</a>
+                &nbsp;·&nbsp;
+                <a href="https://www.google.com/maps/search/?api=1&query=Scandic+Pohjanhovi+Rovaniemi" target="_blank" rel="noopener">Maps</a>
+              </li>
+              <li>
+                <a href="https://www.arcticlighthotel.fi/" target="_blank" rel="noopener">Arctic Light Hotel</a>
+                &nbsp;·&nbsp;
+                <a href="https://www.google.com/maps/search/?api=1&query=Arctic+Light+Hotel+Rovaniemi" target="_blank" rel="noopener">Maps</a>
+              </li>
+              <li>
+                <a href="https://santashotels.fi/en/hotels/rovaniemi-hotel-santa-claus/" target="_blank" rel="noopener">Hotel Santa Claus</a>
+                &nbsp;·&nbsp;
+                <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Santa+Claus+Rovaniemi" target="_blank" rel="noopener">Maps</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Airbnb (Rovaniemi) -->
+        <article class="card" data-type="stay">
+          <div class="card-inner">
+            <div class="card-kicker">
+              <span class="pill">Accommodation</span>
+              <span class="pill">Great value</span>
+            </div>
+            <h4 class="card-title">Airbnb apartments & cabins</h4>
+            <p>
+              In Rovaniemi, Airbnb can be especially good value outside peak winter weeks — there are often plenty of options.
+              Great for groups who want more space (and a kitchen).
+            </p>
+            <ul>
+              <li>Apartments in/near city centre</li>
+              <li>Cabins and houses for bigger groups</li>
+              <li>Often better value off-season</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://www.airbnb.com/rovaniemi-finland/stays" target="_blank" rel="noopener">Browse Airbnb stays</a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Rovaniemi+Finland" target="_blank" rel="noopener">Open Rovaniemi in Maps</a>
+            </div>
+          </div>
+        </article>
       </div>
-
-      <!-- City centre hotels (Rovaniemi) -->
-<article class="card" data-type="stay">
-  <div class="card-inner">
-    <div class="card-kicker">
-      <span class="pill">Accommodation</span>
-      <span class="pill">City centre</span>
-    </div>
-    <h4 class="card-title">City centre hotels</h4>
-    <p>Easy base if you want to walk to restaurants, shops, and the riverfront.</p>
-    <ul>
-      <li>
-        <a href="https://www.scandichotels.com/en/hotels/scandic-pohjanhovi" target="_blank" rel="noopener">
-          Scandic Pohjanhovi
-        </a>
-        &nbsp;·&nbsp;
-        <a href="https://www.google.com/maps/search/?api=1&query=Scandic+Pohjanhovi+Rovaniemi" target="_blank" rel="noopener">
-          Maps
-        </a>
-      </li>
-      <li>
-        <a href="https://www.arcticlighthotel.fi/" target="_blank" rel="noopener">
-          Arctic Light Hotel
-        </a>
-        &nbsp;·&nbsp;
-        <a href="https://www.google.com/maps/search/?api=1&query=Arctic+Light+Hotel+Rovaniemi" target="_blank" rel="noopener">
-          Maps
-        </a>
-      </li>
-      <li>
-        <a href="https://santashotels.fi/en/hotels/rovaniemi-hotel-santa-claus/" target="_blank" rel="noopener">
-          Hotel Santa Claus
-        </a>
-        &nbsp;·&nbsp;
-        <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Santa+Claus+Rovaniemi" target="_blank" rel="noopener">
-          Maps
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
-
-<!-- Airbnb (Rovaniemi) -->
-<article class="card" data-type="stay">
-  <div class="card-inner">
-    <div class="card-kicker">
-      <span class="pill">Accommodation</span>
-      <span class="pill">Great value</span>
-    </div>
-    <h4 class="card-title">Airbnb apartments & cabins</h4>
-    <p>
-      In Rovaniemi, Airbnb can be especially good value outside peak winter weeks — there are often plenty of options.
-      Great for groups who want more space (and a kitchen).
-    </p>
-    <ul>
-      <li>Apartments in/near city centre</li>
-      <li>Cabins and houses for bigger groups</li>
-      <li>Often better value off-season</li>
-    </ul>
-    <div class="card-links">
-      <a href="https://www.airbnb.com/rovaniemi-finland/stays" target="_blank" rel="noopener">Browse Airbnb stays</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Rovaniemi+Finland" target="_blank" rel="noopener">Open Rovaniemi in Maps</a>
-    </div>
-  </div>
-</article>
-
 
       <div class="divider"></div>
     </section>
@@ -559,7 +379,7 @@
     <section id="practical">
       <h2>Practical tips</h2>
       <div class="card-grid">
-        <article class="card" style="grid-column: span 12;">
+        <article class="card travel-full">
           <div class="card-inner">
             <div class="card-kicker">
               <span class="pill">Good to know</span>
@@ -573,45 +393,44 @@
               <li><strong>Laavu etiquette:</strong> shared spaces — leave it clean for the next person.</li>
               <li><strong>Always check hours:</strong> seasonal schedules change.</li>
             </ul>
-            <p class="small">If you want, I can add “1-day in Rovaniemi” and “1-day in Oulu” itinerary cards in the same style.</p>
+            <p class="small">If you want, we can add “1-day in Rovaniemi” and “1-day in Oulu” itinerary cards in the same style.</p>
           </div>
         </article>
       </div>
     </section>
-    
+
     <!-- Availability modal -->
-<div class="availability-modal" id="availabilityModal" role="dialog" aria-modal="true" aria-labelledby="availabilityTitle" aria-hidden="true">
-  <div class="availability-modal__backdrop" data-close="1"></div>
+    <div class="availability-modal" id="availabilityModal" role="dialog" aria-modal="true" aria-labelledby="availabilityTitle" aria-hidden="true">
+      <div class="availability-modal__backdrop" data-close="1"></div>
 
-  <div class="availability-modal__panel" role="document">
-    <div class="availability-modal__header">
-      <h3 id="availabilityTitle" style="margin:0;">Our availability</h3>
-      <button type="button" class="availability-modal__close" id="closeAvailability" aria-label="Close">×</button>
+      <div class="availability-modal__panel" role="document">
+        <div class="availability-modal__header">
+          <h3 id="availabilityTitle" class="availability-modal__title">Our availability</h3>
+          <button type="button" class="availability-modal__close" id="closeAvailability" aria-label="Close">×</button>
+        </div>
+
+        <div class="availability-modal__body">
+          <p>
+            During the wedding week we’ll be quite busy and mostly unavailable from Thursday until the wedding day.
+          </p>
+
+          <p>
+            We’re planning to stay Sunday–Monday night at <strong>Lapland View Hotel</strong> to enjoy a lazy morning and afternoon in the spa,
+            and to have dinner at the nearby restaurant <strong>Kàttilà</strong>, which offers great food and a spectacular view of the
+            <strong>Tornionjoki</strong> river. You are very welcome to join us.
+          </p>
+
+          <p>
+            On Monday, we plan to return to Rovaniemi and we’ll be available if anyone staying longer would like to spend time with us.
+            We can also arrange something special in Rovaniemi for all friends.
+          </p>
+
+          <p class="availability-modal__actions">
+            <button type="button" class="filter-btn" data-close="1">Close</button>
+          </p>
+        </div>
+      </div>
     </div>
-
-    <div class="availability-modal__body">
-      <p>
-        During the wedding week we’ll be quite busy and mostly unavailable from Thursday until the wedding day.
-      </p>
-
-      <p>
-        We’re planning to stay Sunday–Monday night at <strong>Lapland View Hotel</strong> to enjoy a lazy morning and afternoon in the spa,
-        and to have dinner at the nearby restaurant <strong>Kàttilà</strong>, which offers great food and a spectacular view of the
-        <strong>Tornionjoki</strong> river. You are very welcome to join us.
-      </p>
-
-      <p>
-        On Monday, we plan to return to Rovaniemi and we’ll be available if anyone staying longer would like to spend time with us.
-        We can also arrange something special in Rovaniemi for all friends.
-      </p>
-
-      <p style="margin-bottom:0;">
-        <button type="button" class="filter-btn" data-close="1">Close</button>
-      </p>
-    </div>
-  </div>
-</div>
-    
   </main>
 
   <script>
@@ -649,46 +468,41 @@
         });
       });
     })();
-    
-    <script>
-  // Availability modal open/close
-  (function(){
-    const openBtn = document.getElementById("openAvailability");
-    const modal = document.getElementById("availabilityModal");
-    const closeBtn = document.getElementById("closeAvailability");
 
-    if(!openBtn || !modal) return;
+    // Availability modal open/close
+    (function(){
+      const openBtn = document.getElementById("openAvailability");
+      const modal = document.getElementById("availabilityModal");
+      const closeBtn = document.getElementById("closeAvailability");
 
-    function open(){
-      modal.classList.add("is-open");
-      modal.setAttribute("aria-hidden", "false");
-      // focus close button for accessibility
-      if (closeBtn) closeBtn.focus();
-      document.addEventListener("keydown", onKeydown);
-    }
+      if(!openBtn || !modal) return;
 
-    function close(){
-      modal.classList.remove("is-open");
-      modal.setAttribute("aria-hidden", "true");
-      openBtn.focus();
-      document.removeEventListener("keydown", onKeydown);
-    }
+      function open(){
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        if (closeBtn) closeBtn.focus();
+        document.addEventListener("keydown", onKeydown);
+      }
 
-    function onKeydown(e){
-      if(e.key === "Escape") close();
-    }
+      function close(){
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        openBtn.focus();
+        document.removeEventListener("keydown", onKeydown);
+      }
 
-    openBtn.addEventListener("click", open);
+      function onKeydown(e){
+        if(e.key === "Escape") close();
+      }
 
-    if(closeBtn) closeBtn.addEventListener("click", close);
+      openBtn.addEventListener("click", open);
+      if(closeBtn) closeBtn.addEventListener("click", close);
 
-    modal.addEventListener("click", (e) => {
-      const target = e.target;
-      if (target && target.getAttribute && target.getAttribute("data-close") === "1") close();
-    });
-  })();
-</script>
-    
+      modal.addEventListener("click", (e) => {
+        const target = e.target;
+        if (target && target.getAttribute && target.getAttribute("data-close") === "1") close();
+      });
+    })();
   </script>
 </body>
 </html>
